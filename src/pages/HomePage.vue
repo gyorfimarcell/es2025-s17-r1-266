@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import TopRated from "../components/homepage/TopRated.vue";
 </script>
 
 <template>
-    <p>Hello world</p>
+    <TopRated />
 </template>
 
 <style scoped></style>

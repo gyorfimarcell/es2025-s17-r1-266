@@ -1,11 +1,14 @@
 :root {
     --bg-color: #fff;
-    --primary-color: ##7c3aed;
-    --text-color: ##111827;
-    --text-muted-color: #aaaaaa;
+    --bg-secondary-color: #EDE9FE;
+    --primary-color: #7c3aed;
+    --text-color: #111827;
+    --text-muted-color: #212529bf;
 
     --lg-padding-x: 128px;
     --sm-padding-x: 32px;
+
+    --card-radius: 0.3rem;
 }
 
 *,
@@ -27,8 +30,18 @@ a {
     color: unset;
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
 }
 
 button {

@@ -52,10 +52,6 @@ import FooterButton from './FooterButton.vue';
     margin-top: 8px;
 }
 
-h4 {
-    margin: 0;
-}
-
 .icons {
     display: flex;
     gap: 12px;
