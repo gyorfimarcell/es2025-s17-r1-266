@@ -27,13 +27,13 @@ const isOpen = ref(false);
     </header>
 </template>
 
-<style>
+<style scoped>
 .header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 
-    padding: 24px 32px;
+    padding: 32px var(--sm-padding-x);
 }
 
 .logo,
@@ -68,9 +68,6 @@ const isOpen = ref(false);
 .nav a {
     font-size: 1.3rem;
     font-weight: bold;
-
-    text-decoration: none;
-    color: unset;
 }
 
 .hamburger-menu {
@@ -108,7 +105,8 @@ const isOpen = ref(false);
 
 @media screen and (min-width: 992px) {
     .header {
-        padding: 32px 128px;
+        padding-right: var(--lg-padding-x);
+        padding-left: var(--lg-padding-x);
     }
 }
 </style>
