@@ -7,8 +7,8 @@ defineProps<{ restaurant: Restaurant }>();
         <img :src="restaurant.image" :alt="restaurant.name" class="image">
         <div class="row">
             <h2 class="name">{{ restaurant.name }}</h2>
-            <img src="/icons/star.png" alt="Filled star" v-for="_ in restaurant.rating" class="star">
-            <img src="/icons/star.png" alt="Filled star" v-for="_ in 5 - restaurant.rating" class="star empty">
+            <img src="/icons/star.png" alt="Filled star" v-for="_ in Math.round(restaurant.rating)" class="star">
+            <img src="/icons/star.png" alt="Filled star" v-for="_ in 5 - Math.round(restaurant.rating)" class="star empty">
         </div>
         <p class="description">{{ restaurant.description }}</p>
         <a href="#" class="link">View restaurant »</a>

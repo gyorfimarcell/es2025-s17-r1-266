@@ -1,11 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import CardPlaceholder from './CardPlaceholder.vue';
 import RestaurantCard from './RestaurantCard.vue';
 
-const API_URL = "https://es2025-s17-hu-r1-backend.onrender.com/api/v1/restaurants/top-rated";
+const API_URL = "https://es2025-s17-hu-r1-backend.onrender.com/api/v1/restaurants";
 
+const open = ref(false);
 const restaurants = ref<Restaurant[] | undefined>(undefined);
+
+const visibleRestaurants = computed(() => {
+    return open.value ? restaurants.value : restaurants.value?.slice(0, 3);
+})
 
 async function FetchData() {
     restaurants.value = await (await fetch(API_URL)).json();
@@ -14,31 +19,28 @@ FetchData();
 </script>
 
 <template>
-    <div class="toprated">
-        <div class="circle1"></div>
-        <div class="circle2"></div>
+    <div class="restaurant-list">
         <div class="heading">
-            <h1>Featured Restaurants</h1>
-            <p>Discover Unforgettable Dining Destinations</p>
+            <h1>Find Your Perfect Dining Spot</h1>
+            <p>Search by Cuisine, Location, or Name</p>
         </div>
         <div class="restaurants" v-if="restaurants != undefined">
-            <RestaurantCard v-for="restaurant in restaurants" :restaurant="restaurant" :key="'top-' + restaurant.id" />
+            <RestaurantCard v-for="restaurant in visibleRestaurants" :restaurant="restaurant"
+                :key="'list-' + restaurant.id" />
         </div>
         <div class="restaurants" v-else>
             <CardPlaceholder v-for="_ in 3" />
         </div>
+        <button class="show-more" @click="open = !open">{{ open ? "Show less" : "Show more" }}</button>
     </div>
 </template>
 
 <style scoped>
-.toprated {
+.restaurant-list {
     padding: 48px 0;
-    position: relative;
-    overflow: hidden;
 }
 
 .heading {
-    padding: 0 calc(var(--lg-padding-x) / 2);
     text-align: center;
 }
 
@@ -47,8 +49,8 @@ FetchData();
 }
 
 .restaurants {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 48px;
 
     overflow: hidden;
@@ -56,42 +58,18 @@ FetchData();
     padding: 48px var(--sm-padding-x);
 }
 
-.circle1,
-.circle2 {
-    position: absolute;
-    z-index: -10;
+.show-more {
+    width: 100%;
 
-    background-color: var(--bg-secondary-color);
-    border-radius: 50%;
-    width: 460px;
-    height: 460px;
-
-    display: none;
-}
-
-.circle1 {
-    right: -150px;
-    top: 120px;
-}
-
-.circle2 {
-    left: -120px;
-    bottom: -80px;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
 }
 
 @media screen and (min-width: 992px) {
-
-    .circle1,
-    .circle2 {
-        display: block;
-    }
-
-    .heading {
-        text-align: unset;
-    }
-
     .restaurants {
-        flex-direction: row;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
