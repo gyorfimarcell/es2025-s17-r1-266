@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { ref } from "vue";
+
+const isOpen = ref(false);
 </script>
 
 <template>
@@ -6,17 +9,17 @@
         <RouterLink to="/" class="logo">
             <img src="/images/logo.png" alt="DineEase logo">
         </RouterLink>
-        <button class="hamburger-menu"></button>
-        <nav class="nav">
-            <ul>
+        <button class="hamburger-menu" :class="{ open: isOpen }" @click="isOpen = !isOpen"></button>
+        <nav class="nav" :class="{ open: isOpen }">
+            <ul @click="isOpen = false">
                 <li>
                     <RouterLink to="/">Home</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/">About Us</RouterLink>
+                    <RouterLink to="/about">About Us</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/">Contact</RouterLink>
+                    <RouterLink to="/contact">Contact</RouterLink>
                 </li>
             </ul>
         </nav>
@@ -30,7 +33,7 @@
     align-items: center;
     flex-wrap: wrap;
 
-    padding: 24px;
+    padding: 24px 32px;
 }
 
 .logo,
@@ -40,9 +43,18 @@
 
 .nav {
     flex-basis: 100%;
+
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
+}
+
+.nav.open {
+    max-height: 200px;
 }
 
 .nav ul {
+    margin: 16px 0 0 0;
     padding: 0;
 
     display: flex;
@@ -68,20 +80,35 @@
 
     background-image: url("/icons/menu.svg");
     background-size: cover;
+
+    transition: transform .2s ease-in-out;
+}
+
+.hamburger-menu.open {
+    transform: rotate(90deg);
 }
 
 @media screen and (min-width: 768px) {
     .nav {
         flex-basis: unset;
+        margin-left: 64px;
+        max-height: unset;
     }
 
     .nav ul {
+        margin: 0;
         flex-direction: row;
         gap: 32px;
     }
 
     .hamburger-menu {
         display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header {
+        padding: 32px 128px;
     }
 }
 </style>
