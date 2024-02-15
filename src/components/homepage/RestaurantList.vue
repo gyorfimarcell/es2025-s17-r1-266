@@ -5,11 +5,11 @@ import RestaurantCard from './RestaurantCard.vue';
 
 const API_URL = "https://es2025-s17-hu-r1-backend.onrender.com/api/v1/restaurants";
 
-const open = ref(false);
+const isOpen = ref(false);
 const restaurants = ref<Restaurant[] | undefined>(undefined);
 
 const visibleRestaurants = computed(() => {
-    return open.value ? restaurants.value : restaurants.value?.slice(0, 3);
+    return isOpen.value ? restaurants.value : restaurants.value?.slice(0, 3);
 })
 
 async function FetchData() {
@@ -25,13 +25,17 @@ FetchData();
             <p>Search by Cuisine, Location, or Name</p>
         </div>
         <div class="restaurants" v-if="restaurants != undefined">
-            <RestaurantCard v-for="restaurant in visibleRestaurants" :restaurant="restaurant"
-                :key="'list-' + restaurant.id" />
+            <TransitionGroup name="collapse">
+                <RestaurantCard v-for="restaurant in visibleRestaurants" :restaurant="restaurant"
+                    :key="'list-' + restaurant.id" />
+            </TransitionGroup>
         </div>
         <div class="restaurants" v-else>
             <CardPlaceholder v-for="_ in 3" />
         </div>
-        <button class="show-more" @click="open = !open">{{ open ? "Show less" : "Show more" }}</button>
+        <button class="show-more" @click="isOpen = !isOpen" :class="{ open: isOpen }">
+            {{ isOpen ? "Show less" : "Show more" }}
+        </button>
     </div>
 </template>
 
@@ -65,6 +69,30 @@ FetchData();
     font-weight: bold;
     font-size: 1.1em;
     text-align: center;
+}
+
+.show-more::after {
+    content: "⌄";
+    font-size: 1.7em;
+    position: relative;
+    left: 5px;
+    top: -2px;
+}
+
+.show-more.open::after {
+    content: "⌃";
+    top: 13px;
+}
+
+.collapse-enter-active,
+.collapse-leave-active {
+    transition: all 0.3s ease;
+}
+
+.collapse-enter-from,
+.collapse-leave-to {
+    opacity: 0;
+    transform: translateY(-30px);
 }
 
 @media screen and (min-width: 992px) {
