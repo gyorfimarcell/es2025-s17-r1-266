@@ -1,0 +1,20 @@
+.icon {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+
+    background-color: black;
+    mask-size: cover;
+}
+
+.icon-menu {
+    mask-image: url("/icons/menu.svg");
+}
+
+.icon-star {
+    mask-image: url("/icons/star.png");
+}
+
+.icon-search {
+    mask-image: url("/icons/search.svg");
+}

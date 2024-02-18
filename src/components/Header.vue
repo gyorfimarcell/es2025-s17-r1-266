@@ -9,7 +9,9 @@ const isOpen = ref(false);
         <RouterLink to="/" class="logo">
             <img src="/images/logo.png" alt="DineEase logo">
         </RouterLink>
-        <button class="hamburger-menu" :class="{ open: isOpen }" @click="isOpen = !isOpen"></button>
+        <button class="hamburger-menu" :class="{ open: isOpen }" @click="isOpen = !isOpen">
+            <div class="icon icon-menu"></div>
+        </button>
         <nav class="nav" :class="{ open: isOpen }">
             <ul @click="isOpen = false">
                 <li>
@@ -74,14 +76,16 @@ const isOpen = ref(false);
     height: 48px;
     width: 48px;
     margin-left: auto;
+}
 
-    background-image: url("/icons/menu.svg");
-    background-size: cover;
+.hamburger-menu .icon {
+    width: 100%;
+    height: 100%;
 
     transition: transform .2s ease-in-out;
 }
 
-.hamburger-menu.open {
+.hamburger-menu.open .icon {
     transform: rotate(90deg);
 }
 

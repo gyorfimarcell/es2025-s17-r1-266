@@ -7,8 +7,8 @@ defineProps<{ restaurant: Restaurant }>();
         <img :src="restaurant.image" :alt="restaurant.name" class="image">
         <div class="row">
             <h2 class="name">{{ restaurant.name }}</h2>
-            <img src="/icons/star.png" alt="Filled star" v-for="_ in Math.round(restaurant.rating)" class="star">
-            <img src="/icons/star.png" alt="Filled star" v-for="_ in 5 - Math.round(restaurant.rating)" class="star empty">
+            <div class="icon icon-star" v-for="_ in Math.round(restaurant.rating)"></div>
+            <div class="icon icon-star empty" v-for="_ in 5 - Math.round(restaurant.rating)"></div>
         </div>
         <p class="description">{{ restaurant.description }}</p>
         <a href="#" class="link">View restaurant »</a>
@@ -41,7 +41,7 @@ defineProps<{ restaurant: Restaurant }>();
 
 .row {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 8px;
 }
 
@@ -49,13 +49,16 @@ defineProps<{ restaurant: Restaurant }>();
     margin-right: auto;
 }
 
-.star {
-    width: 20px;
-    height: 20px;
+.icon {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+
+    background-color: #f9b501;
 }
 
-.star.empty {
-    filter: grayscale(1);
+.icon.empty {
+    background-color: #9ca3af;
 }
 
 .description {
