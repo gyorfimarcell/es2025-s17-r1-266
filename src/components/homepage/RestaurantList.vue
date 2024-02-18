@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue';
 import CardPlaceholder from './CardPlaceholder.vue';
 import RestaurantCard from './RestaurantCard.vue';
+import SearchBar from './SearchBar.vue';
 
 const API_URL = "https://es2025-s17-hu-r1-backend.onrender.com/api/v1/restaurants";
 
@@ -13,7 +14,14 @@ const visibleRestaurants = computed(() => {
 })
 
 async function FetchData() {
-    restaurants.value = await (await fetch(API_URL)).json();
+    let data = await (await fetch(API_URL)).json();
+
+    for (let i = data.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [data[i], data[j]] = [data[j], data[i]];
+    }
+
+    restaurants.value = data;
 }
 FetchData();
 </script>
@@ -24,6 +32,7 @@ FetchData();
             <h1>Find Your Perfect Dining Spot</h1>
             <p>Search by Cuisine, Location, or Name</p>
         </div>
+        <SearchBar />
         <div class="restaurants" v-if="restaurants != undefined">
             <TransitionGroup name="collapse">
                 <RestaurantCard v-for="restaurant in visibleRestaurants" :restaurant="restaurant"
@@ -46,6 +55,7 @@ FetchData();
 
 .heading {
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .heading h1 {

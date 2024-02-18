@@ -2,6 +2,7 @@
     width: 24px;
     height: 24px;
     margin: auto;
+    flex-shrink: 0;
 
     background-color: black;
     mask-size: cover;
@@ -17,4 +18,12 @@
 
 .icon-search {
     mask-image: url("/icons/search.svg");
+}
+
+.icon-filter {
+    mask-image: url("/icons/filter.svg");
+}
+
+.icon-location {
+    mask-image: url("/icons/location.svg");
 }
