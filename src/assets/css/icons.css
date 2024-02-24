@@ -27,3 +27,8 @@
 .icon-location {
     mask-image: url("/icons/location.svg");
 }
+
+.icon-quote {
+    mask-image: url("/icons/quote.svg");
+    background-color: var(--primary-color);
+}

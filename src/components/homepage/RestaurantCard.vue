@@ -16,21 +16,6 @@ defineProps<{ restaurant: Restaurant }>();
 </template>
 
 <style scoped>
-.card {
-    flex-grow: 1;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    padding: 16px;
-
-    background-color: var(--bg-color);
-    border-radius: var(--card-radius);
-    box-shadow: 0 0 8px rgba(124, 124, 124, 0.4);
-}
-
 .image {
     height: 300px;
     width: 100%;
