@@ -36,6 +36,9 @@ const isOpen = ref(false);
     flex-wrap: wrap;
 
     padding: 32px var(--sm-padding-x);
+
+    position: relative;
+    z-index: 10;
 }
 
 .logo,
