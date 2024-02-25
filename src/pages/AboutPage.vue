@@ -1,11 +1,19 @@
 <script setup lang="ts">
 import TeamMember from "../components/about/TeamMember.vue";
+import TimelineItem from "../components/about/TimelineItem.vue";
 </script>
 
 <template>
     <div class="title">
         <h1>About Us</h1>
         <p>Embracing the Joy of Dining</p>
+    </div>
+    <div class="timeline">
+        <TimelineItem year="2019">Birth of DineEase</TimelineItem>
+        <TimelineItem year="2020">Culinary Connections Made</TimelineItem>
+        <TimelineItem year="2021">Curatorial Excellence Emerges</TimelineItem>
+        <TimelineItem year="2022">Redefining Dining Landscape</TimelineItem>
+        <TimelineItem year="2023">Redefining Dining Landscape</TimelineItem>
     </div>
     <div class="team">
         <h1>Meet our team</h1>
@@ -36,6 +44,13 @@ import TeamMember from "../components/about/TeamMember.vue";
     flex-direction: column;
     align-items: center;
     gap: 16px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: stretch;
+
+    margin-top: 64px;
 }
 
 .team {
@@ -78,6 +93,12 @@ import TeamMember from "../components/about/TeamMember.vue";
 }
 
 @media screen and (min-width: 992px) {
+    .timeline {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 776px;
+    }
+
     .team {
         padding-left: 198px;
         padding-right: 198px;
