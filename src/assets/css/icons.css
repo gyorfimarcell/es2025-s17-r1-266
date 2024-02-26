@@ -32,3 +32,15 @@
     mask-image: url("/icons/quote.svg");
     background-color: var(--primary-color);
 }
+
+.icon-phone {
+    mask-image: url("/icons/phone.svg");
+}
+
+.icon-email {
+    mask-image: url("/icons/email.svg");
+}
+
+.icon-location-filled {
+    mask-image: url("/icons/location-filled.svg");
+}

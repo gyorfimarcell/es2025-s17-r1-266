@@ -25,7 +25,7 @@
                 spot
                 with DineEase.
             </p>
-            <button>
+            <button class="button-primary">
                 <div class="icon icon-search"></div>
                 Explore Restaurants
             </button>
@@ -54,16 +54,9 @@
     z-index: 2;
 }
 
-button {
+.button-primary {
     display: flex;
     align-items: center;
-
-    padding: 12px;
-    border-radius: var(--card-radius);
-    background-color: var(--primary-color);
-
-    color: white;
-    font-weight: bold;
 }
 
 .icon-search {

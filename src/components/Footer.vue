@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import FooterButton from './FooterButton.vue';
+import SocialButtons from './SocialButtons.vue';
 </script>
 
 <template>
@@ -16,11 +16,7 @@ import FooterButton from './FooterButton.vue';
         </div>
         <div class="footer-right">
             <h4>Follow Us</h4>
-            <div class="icons">
-                <FooterButton to="https://facebook.com" icon="facebook.svg" alt="Facebook" />
-                <FooterButton to="https://instagram.com" icon="instagram.svg" alt="Facebook" />
-                <FooterButton to="https://twitter.com" icon="twitter.svg" alt="Facebook" />
-            </div>
+            <SocialButtons />
         </div>
     </footer>
 </template>
@@ -50,11 +46,6 @@ import FooterButton from './FooterButton.vue';
 .muted {
     color: var(--text-muted-color);
     margin-top: 8px;
-}
-
-.icons {
-    display: flex;
-    gap: 12px;
 }
 
 @media screen and (min-width: 992px) {
