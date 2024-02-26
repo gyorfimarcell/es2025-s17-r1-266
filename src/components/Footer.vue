@@ -15,7 +15,7 @@ import SocialButtons from './SocialButtons.vue';
             <p class="muted">© 2024 - All rights reserved</p>
         </div>
         <div class="footer-right">
-            <h4>Follow Us</h4>
+            <p>Follow Us</p>
             <SocialButtons />
         </div>
     </footer>
@@ -43,8 +43,13 @@ import SocialButtons from './SocialButtons.vue';
     margin-right: var(--sm-padding-x);
 }
 
+.footer-right p {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
 .muted {
-    color: var(--text-muted-color);
+    color: #d1d5db;
     margin-top: 8px;
 }
 

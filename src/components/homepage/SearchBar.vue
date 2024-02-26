@@ -27,7 +27,7 @@
         <div class="icon-input advanced-field">
             <input type="text" placeholder="Name" />
         </div>
-        <button class="search-button">
+        <button class="search-button" aria-label="Search">
             <div class="icon icon-search"></div>
         </button>
         <div class="simple-text">
