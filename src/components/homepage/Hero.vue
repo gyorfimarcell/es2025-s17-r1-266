@@ -131,6 +131,12 @@ hr {
 
 /* #endregion */
 
+@media screen and (min-width: 992px) {
+    .hero-illustration {
+        width: 65%;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     #hero {
         flex-direction: row;

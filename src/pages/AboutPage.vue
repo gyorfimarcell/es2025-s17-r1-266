@@ -122,7 +122,9 @@ import TimelineItem from "../components/about/TimelineItem.vue";
     .member {
         flex-basis: calc(100% / 3);
     }
+}
 
+@media screen and (min-width: 1200px) {
     .connect {
         padding-right: 386px;
         padding-left: 386px;

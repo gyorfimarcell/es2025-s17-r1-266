@@ -160,7 +160,7 @@ import SocialButtons from '../components/SocialButtons.vue';
 
 /* #endregion */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
     #contact {
         flex-direction: row;
         gap: 80px;

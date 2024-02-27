@@ -110,6 +110,8 @@ FetchData();
 @media screen and (min-width: 992px) {
     .restaurants {
         grid-template-columns: 1fr 1fr 1fr;
+        padding-left: var(--sm-padding-x);
+        padding-right: var(--sm-padding-x);
     }
 
     .heading h2 {
