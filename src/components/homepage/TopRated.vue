@@ -14,9 +14,11 @@ FetchData();
 </script>
 
 <template>
-    <div class="toprated">
+    <div id="toprated">
+        <!-- Background decorations -->
         <div class="circle1"></div>
         <div class="circle2"></div>
+        <!-- Content -->
         <div class="heading">
             <h1>Featured Restaurants</h1>
             <p>Discover Unforgettable Dining Destinations</p>
@@ -31,10 +33,10 @@ FetchData();
 </template>
 
 <style scoped>
-.toprated {
-    padding: 48px 0;
+#toprated {
     position: relative;
     overflow: hidden;
+    padding: 48px 0;
 }
 
 .heading {
@@ -47,51 +49,54 @@ FetchData();
 }
 
 .restaurants {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 48px;
 
-    overflow: hidden;
-
     padding: 48px var(--sm-padding-x);
 }
+
+/* # region Background decorations */
 
 .circle1,
 .circle2 {
     position: absolute;
     z-index: -10;
 
-    background-color: var(--bg-secondary-color);
-    border-radius: 50%;
+    display: none;
+
     width: 460px;
     height: 460px;
 
-    display: none;
+    background-color: var(--bg-secondary-color);
+    border-radius: 50%;
 }
 
 .circle1 {
-    right: -150px;
     top: 120px;
+    right: -150px;
 }
 
 .circle2 {
-    left: -120px;
     bottom: -80px;
+    left: -120px;
 }
 
+/* #endregion */
+
 @media screen and (min-width: 992px) {
-
-    .circle1,
-    .circle2 {
-        display: block;
-    }
-
     .heading {
         text-align: unset;
     }
 
     .restaurants {
         flex-direction: row;
+    }
+
+    .circle1,
+    .circle2 {
+        display: block;
     }
 }
 

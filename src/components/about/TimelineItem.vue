@@ -20,19 +20,20 @@ defineProps({
 
 <style scoped>
 .timeline-event {
+    position: relative;
+
     display: grid;
-    grid-template-rows: 1fr 1fr 24px 48px 1fr;
     grid-template-areas:
         "year"
         "year"
         "dot"
         "line"
         "event";
-    justify-items: center;
-    align-items: center;
+    grid-template-rows: 1fr 1fr 24px 48px 1fr;
     gap: 8px;
+    align-items: center;
+    justify-items: center;
 
-    position: relative;
     width: 100%;
 
     text-align: center;
@@ -42,6 +43,7 @@ defineProps({
     position: absolute;
     right: 0;
     left: 0;
+
     height: 2px;
 
     background-color: var(--primary-color);
@@ -50,9 +52,8 @@ defineProps({
 .year {
     grid-area: year;
     align-self: end;
-
-    color: var(--primary-color);
     font-weight: bold;
+    color: var(--primary-color);
 }
 
 .dot {
@@ -61,23 +62,21 @@ defineProps({
     width: 14px;
     height: 14px;
 
-    border-radius: 50%;
     background-color: var(--primary-color);
-
+    border-radius: 50%;
     outline: 3px solid var(--primary-color);
     outline-offset: 2px;
 }
 
 .line {
-    grid-area: line;
-
     display: flex;
+    grid-area: line;
     flex-direction: column;
     align-items: center;
     justify-content: end;
 
-    height: 48px;
     width: 1px;
+    height: 48px;
 
     background-color: var(--text-muted-color);
 }
@@ -85,9 +84,8 @@ defineProps({
 .line-end {
     width: 5px;
     height: 5px;
-
-    border-radius: 50%;
     background-color: var(--text-muted-color);
+    border-radius: 50%;
 }
 
 .event {

@@ -3,7 +3,7 @@ import SocialButtons from './SocialButtons.vue';
 </script>
 
 <template>
-    <footer class="footer">
+    <footer id="footer">
         <div class="footer-left">
             <FooterButton to="/" icon="logomark.svg" alt="DineEase logo" />
             <RouterLink to="/privacy-policy">Privacy Policy</RouterLink>
@@ -12,7 +12,7 @@ import SocialButtons from './SocialButtons.vue';
                 &emsp;
                 <a href="mailto:support@dineease.com">support@dineease.com</a>
             </p>
-            <p class="muted">© 2024 - All rights reserved</p>
+            <p class="copyright">© 2024 - All rights reserved</p>
         </div>
         <div class="footer-right">
             <p>Follow Us</p>
@@ -22,14 +22,15 @@ import SocialButtons from './SocialButtons.vue';
 </template>
 
 <style scoped>
-.footer {
+#footer {
     display: flex;
     justify-content: space-between;
 
     padding: 64px var(--sm-padding-x);
 
-    background-color: black;
     color: #fff;
+
+    background-color: black;
 }
 
 .footer-left,
@@ -44,17 +45,17 @@ import SocialButtons from './SocialButtons.vue';
 }
 
 .footer-right p {
-    font-weight: bold;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
-.muted {
-    color: #d1d5db;
+.copyright {
     margin-top: 8px;
+    color: #d1d5db;
 }
 
 @media screen and (min-width: 992px) {
-    .footer {
+    #footer {
         padding-right: var(--lg-padding-x);
         padding-left: var(--lg-padding-x);
     }

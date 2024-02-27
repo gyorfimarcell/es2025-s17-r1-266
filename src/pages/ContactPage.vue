@@ -4,10 +4,13 @@ import SocialButtons from '../components/SocialButtons.vue';
 </script>
 
 <template>
-    <div class="container">
+    <div id="contact">
         <div class="info">
+            <!-- Background decorations -->
             <div class="circle1"></div>
             <div class="circle2"></div>
+
+            <!-- Content -->
             <h2>Contact Information</h2>
             <p>Have an inquiry? Fill out the form to contact our team.</p>
             <div class="details">
@@ -23,11 +26,11 @@ import SocialButtons from '../components/SocialButtons.vue';
         <div class="form">
             <h1>Contact Us</h1>
             <p>Have an inquiry? Fill out the form to contact our team.</p>
-            <div class="row">
+            <div class="form-row">
                 <input type="text" placeholder="First Name">
                 <input type="text" placeholder="Last Name">
             </div>
-            <div class="row">
+            <div class="form-row">
                 <input type="email" placeholder="Email">
                 <input type="tel" placeholder="Phone Number">
             </div>
@@ -38,7 +41,7 @@ import SocialButtons from '../components/SocialButtons.vue';
 </template>
 
 <style scoped>
-.container {
+#contact {
     display: flex;
     flex-direction: column;
     gap: 64px;
@@ -47,6 +50,7 @@ import SocialButtons from '../components/SocialButtons.vue';
     padding-top: 32px;
 }
 
+/* #region Contact information block */
 .info {
     flex-grow: 1;
     display: flex;
@@ -71,17 +75,18 @@ import SocialButtons from '../components/SocialButtons.vue';
 
     margin-top: 64px;
     margin-bottom: 160px;
+
+    .icon {
+        margin: 0;
+        background-color: white;
+    }
 }
 
-.details .icon {
-    margin: 0;
-    background-color: white;
-}
-
-.info .social-buttons {
+.social-buttons {
     gap: 24px;
 }
 
+/* #region Background decorations */
 .circle1,
 .circle2 {
     position: absolute;
@@ -106,6 +111,11 @@ import SocialButtons from '../components/SocialButtons.vue';
     right: 64px;
 }
 
+/* #endregion */
+
+/* #endregion */
+
+/* #region Contact Us block */
 .form {
     flex-grow: 10;
     display: flex;
@@ -113,7 +123,7 @@ import SocialButtons from '../components/SocialButtons.vue';
     gap: 16px;
 }
 
-.form .row {
+.form-row {
     display: flex;
     gap: 16px;
 }
@@ -135,8 +145,10 @@ import SocialButtons from '../components/SocialButtons.vue';
     margin-top: 32px;
 }
 
+/* #endregion */
+
 @media screen and (min-width: 1200px) {
-    .container {
+    #contact {
         flex-direction: row;
         gap: 80px;
 

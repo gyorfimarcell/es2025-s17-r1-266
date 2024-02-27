@@ -1,7 +1,10 @@
 <template>
-    <div class="search-bar">
+    <div id="search-bar">
+        <!-- Radio buttons for switching between search modes -->
         <input type="radio" name="search" id="advanced" />
         <input type="radio" name="search" id="simple" />
+
+        <!-- Simple searchbar -->
         <div class="simple-field">
             <div class="icon icon-search"></div>
             <input type="text" placeholder="Search for restaurants" />
@@ -10,6 +13,8 @@
                 <div class="icon icon-filter"></div>
             </label>
         </div>
+
+        <!-- Advanced searchbar -->
         <div class="advanced-field">
             <select>
                 <option selected disabled hidden>Cusine</option>
@@ -27,9 +32,11 @@
         <div class="icon-input advanced-field">
             <input type="text" placeholder="Name" />
         </div>
+
         <button class="search-button" aria-label="Search">
             <div class="icon icon-search"></div>
         </button>
+
         <div class="simple-text">
             <label for="simple">
                 Simple search
@@ -39,22 +46,41 @@
 </template>
 
 <style scoped>
-.search-bar {
+#search-bar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 12px;
+    align-items: center;
+    justify-content: center;
 }
+
+/* #region Input styles */
+input[type="text"],
+select {
+    width: 100%;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="text"]::placeholder,
+select:has(option[hidden]:checked) {
+    color: var(--text-muted-color);
+}
+
+/* #endregion */
 
 .simple-field,
 .advanced-field {
-    flex-grow: 1;
-
     display: flex;
-    align-items: center;
+    flex-grow: 1;
     gap: 12px;
+    align-items: center;
 
     width: 100%;
     max-width: 400px;
@@ -69,65 +95,44 @@
     }
 }
 
-
-.simple-field .icon-filter {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-}
-
 .advanced-field {
     display: none;
 }
 
-input[type="text"],
-select {
-    width: 100%;
-
-    font-size: 1.1rem;
-
-    border: none;
-    background-color: transparent;
-}
-
-input[type="radio"] {
-    display: none;
-}
-
-input[type="text"]::placeholder,
-select:has(option[hidden]:checked) {
-    color: var(--text-muted-color);
+.icon-filter {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
 }
 
 .simple-text {
+    display: none;
     flex-basis: 100%;
 
-    display: none;
-
     label {
-        margin: auto;
-
         cursor: pointer;
 
-        color: var(--primary-color);
-        font-weight: bold;
+        margin: auto;
+
         font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--primary-color);
     }
 }
 
 .search-button {
     width: 400px;
     height: 48px;
-
-    border-radius: var(--card-radius);
     background-color: var(--bg-secondary-color);
+    border-radius: var(--card-radius);
 
     .icon {
         background-color: var(--primary-color);
     }
 }
 
-.search-bar:has(#advanced:checked) {
+/* Styles for advanced search bar */
+#search-bar:has(#advanced:checked) {
     .simple-field {
         display: none;
     }
@@ -139,7 +144,7 @@ select:has(option[hidden]:checked) {
 }
 
 @media screen and (min-width: 768px) {
-    .search-bar {
+    #search-bar {
         flex-direction: row;
     }
 

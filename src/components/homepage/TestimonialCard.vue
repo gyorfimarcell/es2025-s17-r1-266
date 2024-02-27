@@ -14,23 +14,23 @@ defineProps<{ author: string }>();
 
 <style scoped>
 .card {
-    padding: 32px 48px 32px 64px;
-    gap: 32px;
     position: relative;
+    gap: 32px;
+    padding: 32px 48px 32px 64px;
 }
 
 
 .icon-quote {
-    height: 1rem;
-    width: 19px;
-
     position: absolute;
     top: 32px;
     left: 32px;
+
+    width: 19px;
+    height: 1rem;
 }
 
 .author {
-    font-weight: bold;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 </style>

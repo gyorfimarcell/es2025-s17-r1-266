@@ -4,12 +4,12 @@
     --primary-color: #7c3aed;
     --text-color: #111827;
     --text-muted-color: #505967;
-
     --lg-padding-x: 128px;
     --sm-padding-x: 32px;
-
     --card-radius: 0.3rem;
 }
+
+/* #region Default element styles */
 
 *,
 *::before,
@@ -19,15 +19,9 @@
 
 body {
     margin: 0;
-
-    background-color: var(--bg-color);
+    font-family: "Arial", "Helvetica", sans-serif;
     color: var(--text-color);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: unset;
+    background-color: var(--bg-color);
 }
 
 p,
@@ -48,36 +42,47 @@ h2 {
     font-size: 2rem;
 }
 
+a {
+    color: unset;
+    text-decoration: none;
+}
+
 button {
-    border: none;
-    background: none;
     padding: 0;
+    background: none;
+    border: none;
 }
 
 button:hover {
     cursor: pointer;
 }
 
-.card {
-    flex-grow: 1;
-    width: 100%;
+/* #endregion */
 
+/* # region Common styles */
+
+.card {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     gap: 16px;
 
+    width: 100%;
     padding: 16px;
 
     background-color: var(--bg-color);
     border-radius: var(--card-radius);
-    box-shadow: 0 0 8px rgba(124, 124, 124, 0.4);
+    box-shadow: 0 0 8px rgb(124 124 124 / 0.4);
 }
 
 .button-primary {
     padding: 12px;
-    border-radius: var(--card-radius);
-    background-color: var(--primary-color);
 
-    color: white;
     font-weight: bold;
+    color: white;
+
+    background-color: var(--primary-color);
+    border-radius: var(--card-radius);
 }
+
+/* #endregion */

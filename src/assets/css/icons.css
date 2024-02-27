@@ -1,23 +1,17 @@
 .icon {
+    flex-shrink: 0;
+
     width: 24px;
     height: 24px;
     margin: auto;
-    flex-shrink: 0;
 
     background-color: black;
+
     mask-size: cover;
 }
 
-.icon-menu {
-    mask-image: url("/icons/menu.svg");
-}
-
-.icon-star {
-    mask-image: url("/icons/star.png");
-}
-
-.icon-search {
-    mask-image: url("/icons/search.svg");
+.icon-email {
+    mask-image: url("/icons/email.svg");
 }
 
 .icon-filter {
@@ -28,19 +22,28 @@
     mask-image: url("/icons/location.svg");
 }
 
-.icon-quote {
-    mask-image: url("/icons/quote.svg");
-    background-color: var(--primary-color);
+.icon-location-filled {
+    mask-image: url("/icons/location-filled.svg");
+}
+
+.icon-menu {
+    mask-image: url("/icons/menu.svg");
 }
 
 .icon-phone {
     mask-image: url("/icons/phone.svg");
 }
 
-.icon-email {
-    mask-image: url("/icons/email.svg");
+.icon-quote {
+    background-color: var(--primary-color);
+
+    mask-image: url("/icons/quote.svg");
 }
 
-.icon-location-filled {
-    mask-image: url("/icons/location-filled.svg");
+.icon-search {
+    mask-image: url("/icons/search.svg");
+}
+
+.icon-star {
+    mask-image: url("/icons/star.png");
 }

@@ -17,32 +17,30 @@ defineProps<{ restaurant: Restaurant }>();
 
 <style scoped>
 .image {
-    height: 300px;
     width: 100%;
+    height: 300px;
     object-fit: cover;
-
     border-radius: var(--card-radius);
 }
 
 .row {
     display: flex;
-    align-items: baseline;
     gap: 8px;
+    align-items: baseline;
 }
 
 .name {
     margin-right: auto;
 }
 
-.icon {
+.icon-star {
     width: 18px;
     height: 18px;
     margin: 0;
-
     background-color: #f9b501;
 }
 
-.icon.empty {
+.icon-star.empty {
     background-color: #9ca3af;
 }
 
@@ -51,10 +49,9 @@ defineProps<{ restaurant: Restaurant }>();
 }
 
 .link {
-    color: var(--primary-color);
-    font-weight: bold;
-
     margin-top: auto;
+    font-weight: bold;
+    color: var(--primary-color);
     text-align: end;
 }
 </style>

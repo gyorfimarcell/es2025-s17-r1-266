@@ -4,7 +4,7 @@ import TestimonialCard from './TestimonialCard.vue';
 </script>
 
 <template>
-    <div class="testimonials">
+    <div id="testimonials">
         <h1>Delightful Experiences Shared by Our Guests</h1>
         <TestimonialCard author="Emma & Jacob">
             With DineEase, we've uncovered culinary treasures right in our city. Every dining recommendation feels like an
@@ -22,7 +22,7 @@ import TestimonialCard from './TestimonialCard.vue';
 </template>
 
 <style scoped>
-.testimonials {
+#testimonials {
     position: relative;
 
     display: grid;
@@ -40,35 +40,34 @@ import TestimonialCard from './TestimonialCard.vue';
 
 .icon-quote {
     position: absolute;
-    width: 142px;
-    height: 116px;
-
     top: 64px;
     left: 16px;
+
+    width: 142px;
+    height: 116px;
 }
 
 @media screen and (min-width: 992px) {
-    .testimonials {
+    #testimonials {
         grid-template-columns: 1fr 1fr;
         gap: 48px 32px;
     }
 
     h1 {
-        max-width: 480px;
         grid-row: span 3;
+        max-width: 480px;
     }
 
     .card {
-        max-width: 380px;
         grid-row: span 5;
+        max-width: 380px;
     }
 
     .card:nth-of-type(1) {
-        max-width: 480px;
-        order: unset;
-
         grid-column: 2;
         grid-row: 2 / span 5;
+        order: unset;
+        max-width: 480px;
     }
 
     .card:nth-of-type(2),

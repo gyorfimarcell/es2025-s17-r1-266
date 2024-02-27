@@ -4,7 +4,7 @@ import TimelineItem from "../components/about/TimelineItem.vue";
 </script>
 
 <template>
-    <div class="title">
+    <div class="heading">
         <h1>About Us</h1>
         <p>Embracing the Joy of Dining</p>
     </div>
@@ -38,21 +38,21 @@ import TimelineItem from "../components/about/TimelineItem.vue";
 </template>
 
 <style scoped>
-.title,
+.heading,
 .team {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 16px;
+    align-items: center;
 }
 
 .timeline {
     display: flex;
     justify-content: stretch;
-
     margin-top: 64px;
 }
 
+/* #region Meet our Team */
 .team {
     padding: 64px var(--lg-padding-x);
 }
@@ -60,8 +60,8 @@ import TimelineItem from "../components/about/TimelineItem.vue";
 .members {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 48px 0;
+    justify-content: center;
 
     margin-top: 48px;
 }
@@ -70,38 +70,45 @@ import TimelineItem from "../components/about/TimelineItem.vue";
     flex-basis: 50%;
 }
 
+/* #endregion */
+
+/* # region Connect with DineEase */
 .connect {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 32px;
+    align-items: center;
 
     padding: 120px var(--sm-padding-x);
 
-    background-color: var(--primary-color);
     color: white;
     text-align: center;
+
+    background-color: var(--primary-color);
 }
 
 .connect button {
     padding: 12px;
-    border-radius: var(--card-radius);
+
+    font-weight: bold;
+    color: var(--primary-color);
 
     background-color: white;
-    color: var(--primary-color);
-    font-weight: bold;
+    border-radius: var(--card-radius);
 }
+
+/* #endregion */
 
 @media screen and (min-width: 992px) {
     .timeline {
-        margin-left: auto;
-        margin-right: auto;
         max-width: 776px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .team {
-        padding-left: 198px;
         padding-right: 198px;
+        padding-left: 198px;
     }
 
     .member {
@@ -109,8 +116,8 @@ import TimelineItem from "../components/about/TimelineItem.vue";
     }
 
     .connect {
-        padding-left: 386px;
         padding-right: 386px;
+        padding-left: 386px;
     }
 }
 </style>

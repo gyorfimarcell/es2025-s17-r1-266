@@ -27,7 +27,7 @@ FetchData();
 </script>
 
 <template>
-    <div class="restaurant-list">
+    <div id="restaurant-list">
         <div class="heading">
             <h1>Find Your Perfect Dining Spot</h1>
             <p>Search by Cuisine, Location, or Name</p>
@@ -49,13 +49,13 @@ FetchData();
 </template>
 
 <style scoped>
-.restaurant-list {
+#restaurant-list {
     padding: 48px 0;
 }
 
 .heading {
-    text-align: center;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .heading h1 {
@@ -63,11 +63,10 @@ FetchData();
 }
 
 .restaurants {
+    overflow: hidden;
     display: grid;
     grid-template-columns: 1fr;
     gap: 48px;
-
-    overflow: hidden;
 
     padding: 48px var(--sm-padding-x);
 }
@@ -75,18 +74,20 @@ FetchData();
 .show-more {
     width: 100%;
 
-    color: var(--primary-color);
-    font-weight: bold;
     font-size: 1.1em;
+    font-weight: bold;
+    color: var(--primary-color);
     text-align: center;
 }
 
 .show-more::after {
     content: "⌄";
-    font-size: 1.7em;
+
     position: relative;
-    left: 5px;
     top: -2px;
+    left: 5px;
+
+    font-size: 1.7em;
 }
 
 .show-more.open::after {
@@ -101,8 +102,8 @@ FetchData();
 
 .collapse-enter-from,
 .collapse-leave-to {
-    opacity: 0;
     transform: translateY(-30px);
+    opacity: 0;
 }
 
 @media screen and (min-width: 992px) {

@@ -5,7 +5,7 @@ const isOpen = ref(false);
 </script>
 
 <template>
-    <header class="header">
+    <header id="header">
         <RouterLink to="/" class="logo">
             <img src="/images/logo.png" alt="DineEase logo">
         </RouterLink>
@@ -30,15 +30,15 @@ const isOpen = ref(false);
 </template>
 
 <style scoped>
-.header {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-
-    padding: 32px var(--sm-padding-x);
-
+#header {
     position: relative;
     z-index: 10;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: 32px var(--sm-padding-x);
 }
 
 .logo,
@@ -47,9 +47,8 @@ const isOpen = ref(false);
 }
 
 .nav {
-    flex-basis: 100%;
-
     overflow: hidden;
+    flex-basis: 100%;
     max-height: 0;
     transition: max-height 0.2s;
 }
@@ -59,13 +58,13 @@ const isOpen = ref(false);
 }
 
 .nav ul {
-    margin: 16px 0 0 0;
-    padding: 0;
-
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 8px;
+    align-items: center;
+
+    margin: 16px 0 0 0;
+    padding: 0;
 
     list-style: none;
 }
@@ -76,15 +75,14 @@ const isOpen = ref(false);
 }
 
 .hamburger-menu {
-    height: 48px;
     width: 48px;
+    height: 48px;
     margin-left: auto;
 }
 
 .hamburger-menu .icon {
     width: 100%;
     height: 100%;
-
     transition: transform .2s ease-in-out;
 }
 
@@ -95,14 +93,14 @@ const isOpen = ref(false);
 @media screen and (min-width: 768px) {
     .nav {
         flex-basis: unset;
-        margin-left: 64px;
         max-height: unset;
+        margin-left: 64px;
     }
 
     .nav ul {
-        margin: 0;
         flex-direction: row;
         gap: 32px;
+        margin: 0;
     }
 
     .hamburger-menu {
@@ -111,7 +109,7 @@ const isOpen = ref(false);
 }
 
 @media screen and (min-width: 992px) {
-    .header {
+    #header {
         padding-right: var(--lg-padding-x);
         padding-left: var(--lg-padding-x);
     }
