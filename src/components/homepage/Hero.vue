@@ -13,7 +13,7 @@
                 <div class="stripe" style="flex-grow: 31; background-color: #c4b5fd;"></div>
             </div>
             <div class="stripes-row">
-                <div class="stripe" style="flex-grow: 27; background-color: var(--bg-secondary-color);"></div>
+                <div class="stripe" style="flex-grow: 27; background-color: var(--bg-primary-color);"></div>
                 <div class="stripe" style="flex-grow: 100;"></div>
                 <div class="stripe" style="flex-grow: 22; background-color: var(--primary-color);"></div>
             </div>
@@ -56,6 +56,7 @@
 }
 
 p {
+    font-size: 1rem;
     line-height: 1.7rem;
 }
 
@@ -111,7 +112,7 @@ hr {
 .stripes-row:nth-of-type(1) .stripe:nth-of-type(2) {
     flex-grow: 30;
     margin-right: 32px;
-    background: linear-gradient(to right, #f6f9ff, var(--bg-secondary-color));
+    background: linear-gradient(to right, #f6f9ff, var(--bg-primary-color));
 }
 
 .circle {
@@ -124,7 +125,7 @@ hr {
     width: 360px;
     height: 360px;
 
-    background: var(--bg-secondary-color);
+    background: var(--bg-primary-color);
     filter: blur(16px);
     border-radius: 100%;
 }
@@ -151,10 +152,6 @@ hr {
 
     .hero-content {
         max-width: 620px;
-    }
-
-    p {
-        font-size: 1.2rem;
     }
 
     h1 {

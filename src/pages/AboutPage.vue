@@ -45,10 +45,6 @@ import TimelineItem from "../components/about/TimelineItem.vue";
     align-items: center;
 }
 
-.heading p {
-    font-size: 1.2rem;
-}
-
 .timeline {
     display: flex;
     justify-content: stretch;
@@ -61,7 +57,6 @@ import TimelineItem from "../components/about/TimelineItem.vue";
 }
 
 .team p {
-    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -96,7 +91,6 @@ import TimelineItem from "../components/about/TimelineItem.vue";
 }
 
 .connect p {
-    font-size: 1.2rem;
     line-height: 1.6rem;
 }
 

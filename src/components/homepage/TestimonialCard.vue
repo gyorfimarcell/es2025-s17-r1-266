@@ -21,7 +21,6 @@ defineProps<{ author: string }>();
     line-height: 1.5rem;
 }
 
-
 .icon-quote {
     position: absolute;
     top: 32px;
@@ -29,6 +28,10 @@ defineProps<{ author: string }>();
 
     width: 19px;
     height: 1rem;
+}
+
+p {
+    font-size: 1rem;
 }
 
 .author {
@@ -40,10 +43,6 @@ defineProps<{ author: string }>();
     .card {
         gap: 24px;
         line-height: 1.7rem;
-    }
-
-    p {
-        font-size: 1.2rem;
     }
 }
 </style>

@@ -87,7 +87,7 @@ select:has(option[hidden]:checked) {
     padding: 10px;
 
     background-color: #f5f5f5;
-    border-radius: var(--card-radius);
+    border-radius: var(--radius);
 
     .icon {
         width: 28px;
@@ -123,8 +123,8 @@ select:has(option[hidden]:checked) {
 .search-button {
     width: 48px;
     height: 48px;
-    background-color: var(--bg-secondary-color);
-    border-radius: var(--card-radius);
+    background-color: var(--bg-primary-color);
+    border-radius: var(--radius);
 
     .icon {
         background-color: var(--primary-color);
@@ -159,7 +159,7 @@ select:has(option[hidden]:checked) {
     }
 
     .search-button {
-        width: 48px;
+        width: 48px !important;
     }
 }
 </style>

@@ -28,7 +28,7 @@ defineProps<{ restaurant: Restaurant }>();
     margin-bottom: 16px;
 
     object-fit: cover;
-    border-radius: var(--card-radius);
+    border-radius: var(--radius);
 }
 
 .row {
@@ -54,6 +54,7 @@ defineProps<{ restaurant: Restaurant }>();
 }
 
 .description {
+    font-size: 1rem;
     line-height: 1.5rem;
     color: var(--text-muted-color);
 }

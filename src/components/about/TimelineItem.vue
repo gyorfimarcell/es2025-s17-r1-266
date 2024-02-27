@@ -52,6 +52,8 @@ defineProps({
 .year {
     grid-area: year;
     align-self: end;
+
+    font-size: 1rem;
     font-weight: bold;
     color: var(--primary-color);
 }
@@ -91,6 +93,7 @@ defineProps({
 .event {
     grid-area: event;
     align-self: start;
+    font-size: 1rem;
 }
 
 .timeline-event:nth-of-type(even) {

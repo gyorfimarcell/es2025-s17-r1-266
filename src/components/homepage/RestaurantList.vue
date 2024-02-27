@@ -118,10 +118,6 @@ FetchData();
     .heading h1 {
         font-size: 2.9rem;
     }
-
-    .heading p {
-        font-size: 1.2rem;
-    }
 }
 
 @media screen and (min-width: 1200px) {

@@ -47,10 +47,6 @@
     line-height: 1.7rem;
 }
 
-p {
-    font-size: 1.2rem;
-}
-
 .heading {
     font-weight: bold;
 }

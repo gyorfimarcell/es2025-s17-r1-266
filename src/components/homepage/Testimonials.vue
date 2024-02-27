@@ -32,7 +32,7 @@ import TestimonialCard from './TestimonialCard.vue';
     padding: 124px var(--sm-padding-x);
     padding-bottom: 96px;
 
-    background-color: var(--bg-secondary-color);
+    background-color: var(--bg-primary-color);
 }
 
 h1 {

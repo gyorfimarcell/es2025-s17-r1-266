@@ -48,10 +48,6 @@ FetchData();
     margin-bottom: 16px;
 }
 
-.heading p {
-    font-size: 1.2rem;
-}
-
 .restaurants {
     overflow: hidden;
     display: flex;
@@ -70,7 +66,7 @@ FetchData();
 
     display: none;
 
-    background-color: var(--bg-secondary-color);
+    background-color: var(--bg-primary-color);
     border-radius: 50%;
 }
 

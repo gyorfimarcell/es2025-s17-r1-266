@@ -66,7 +66,7 @@ import SocialButtons from '../components/SocialButtons.vue';
     color: white;
 
     background-color: var(--primary-color);
-    border-radius: var(--card-radius);
+    border-radius: var(--radius);
 }
 
 .info h2+p {
@@ -131,10 +131,6 @@ form {
     gap: 16px;
 }
 
-form p {
-    font-size: 1.2rem;
-}
-
 .form-row {
     display: flex;
     gap: 16px;
@@ -150,7 +146,7 @@ form :is(input, textarea) {
 
     background-color: #f5f5f5;
     border: none;
-    border-radius: var(--card-radius);
+    border-radius: var(--radius);
 }
 
 form .button-primary {

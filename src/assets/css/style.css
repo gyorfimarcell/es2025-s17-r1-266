@@ -1,12 +1,12 @@
 :root {
     --bg-color: #fff;
-    --bg-secondary-color: #EDE9FE;
+    --bg-primary-color: #EDE9FE;
     --primary-color: #7c3aed;
     --text-color: #111827;
     --text-muted-color: #505967;
     --lg-padding-x: 110px;
     --sm-padding-x: 32px;
-    --card-radius: 0.6rem;
+    --radius: 0.6rem;
 }
 
 /* #region Default element styles */
@@ -32,6 +32,10 @@ h4,
 h5,
 h6 {
     margin: 0;
+}
+
+p {
+    font-size: 1.2rem;
 }
 
 h1 {
@@ -71,7 +75,7 @@ button:hover {
     padding: 16px;
 
     background-color: var(--bg-color);
-    border-radius: var(--card-radius);
+    border-radius: var(--radius);
     box-shadow: 0 0 8px rgb(124 124 124 / 0.4);
 }
 
@@ -83,7 +87,7 @@ button:hover {
     color: white;
 
     background-color: var(--primary-color);
-    border-radius: var(--card-radius);
+    border-radius: var(--radius);
 }
 
 /* #endregion */

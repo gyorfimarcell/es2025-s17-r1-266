@@ -35,6 +35,10 @@ import SocialButtons from './SocialButtons.vue';
     background-color: black;
 }
 
+p {
+    font-size: 1rem;
+}
+
 .footer-left,
 .footer-right {
     display: flex;
