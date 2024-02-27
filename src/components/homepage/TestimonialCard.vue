@@ -16,7 +16,9 @@ defineProps<{ author: string }>();
 .card {
     position: relative;
     gap: 32px;
-    padding: 32px 48px 32px 64px;
+    padding: 38px 48px 32px 64px;
+
+    line-height: 1.5rem;
 }
 
 
@@ -32,5 +34,16 @@ defineProps<{ author: string }>();
 .author {
     font-size: 1.1rem;
     font-weight: bold;
+}
+
+@media screen and (min-width: 992px) {
+    .card {
+        gap: 24px;
+        line-height: 1.7rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
 }
 </style>

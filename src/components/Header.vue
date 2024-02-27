@@ -38,12 +38,12 @@ const isOpen = ref(false);
     flex-wrap: wrap;
     align-items: center;
 
-    padding: 32px var(--sm-padding-x);
+    padding: 16px calc(var(--sm-padding-x) + 8px);
 }
 
 .logo,
 .logo img {
-    height: 48px;
+    height: 32px;
 }
 
 .nav {
@@ -78,6 +78,8 @@ const isOpen = ref(false);
     width: 48px;
     height: 48px;
     margin-left: auto;
+    padding: 3px;
+    padding-left: 8px;
 }
 
 .hamburger-menu .icon {
@@ -94,13 +96,18 @@ const isOpen = ref(false);
     .nav {
         flex-basis: unset;
         max-height: unset;
-        margin-left: 64px;
+        margin-left: 42px;
     }
 
     .nav ul {
         flex-direction: row;
-        gap: 32px;
+        gap: 24px;
         margin: 0;
+    }
+
+    .nav a {
+        font-size: 0.9rem;
+        font-weight: bold;
     }
 
     .hamburger-menu {
@@ -110,8 +117,7 @@ const isOpen = ref(false);
 
 @media screen and (min-width: 992px) {
     #header {
-        padding-right: var(--lg-padding-x);
-        padding-left: var(--lg-padding-x);
+        padding: 24px var(--lg-padding-x);
     }
 }
 </style>

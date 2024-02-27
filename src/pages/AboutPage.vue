@@ -31,9 +31,8 @@ import TimelineItem from "../components/about/TimelineItem.vue";
         <p>
             Hungry for more? Whether you have questions, feedback, or simply wish to share your culinary story, we're eager
             to hear from you. Dive deeper into the DineEase experience and let's make every meal memorable.
-            Button text: Connect With DineEase
         </p>
-        <button>Connect With DineEase</button>
+        <button class="button-primary">Connect With DineEase</button>
     </div>
 </template>
 
@@ -46,15 +45,24 @@ import TimelineItem from "../components/about/TimelineItem.vue";
     align-items: center;
 }
 
+.heading p {
+    font-size: 1.2rem;
+}
+
 .timeline {
     display: flex;
     justify-content: stretch;
-    margin-top: 64px;
+    margin-top: 56px;
 }
 
 /* #region Meet our Team */
 .team {
     padding: 64px var(--lg-padding-x);
+}
+
+.team p {
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .members {
@@ -76,7 +84,7 @@ import TimelineItem from "../components/about/TimelineItem.vue";
 .connect {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 52px;
     align-items: center;
 
     padding: 120px var(--sm-padding-x);
@@ -87,21 +95,21 @@ import TimelineItem from "../components/about/TimelineItem.vue";
     background-color: var(--primary-color);
 }
 
+.connect p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
 .connect button {
-    padding: 12px;
-
-    font-weight: bold;
     color: var(--primary-color);
-
     background-color: white;
-    border-radius: var(--card-radius);
 }
 
 /* #endregion */
 
 @media screen and (min-width: 992px) {
     .timeline {
-        max-width: 776px;
+        max-width: 767px;
         margin-right: auto;
         margin-left: auto;
     }

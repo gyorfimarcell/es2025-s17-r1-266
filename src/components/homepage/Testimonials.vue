@@ -29,9 +29,14 @@ import TestimonialCard from './TestimonialCard.vue';
     grid-template-columns: 1fr;
     gap: 24px;
 
-    padding: 128px var(--sm-padding-x);
+    padding: 124px var(--sm-padding-x);
+    padding-bottom: 96px;
 
     background-color: var(--bg-secondary-color);
+}
+
+h1 {
+    font-size: 2.2rem;
 }
 
 .card:nth-of-type(1) {
@@ -41,7 +46,7 @@ import TestimonialCard from './TestimonialCard.vue';
 .icon-quote {
     position: absolute;
     top: 64px;
-    left: 16px;
+    left: 20px;
 
     width: 142px;
     height: 116px;
@@ -51,11 +56,14 @@ import TestimonialCard from './TestimonialCard.vue';
     #testimonials {
         grid-template-columns: 1fr 1fr;
         gap: 48px 32px;
+        padding-bottom: 86px;
     }
 
     h1 {
         grid-row: span 3;
-        max-width: 480px;
+        justify-self: end;
+        max-width: 488px;
+        font-size: 3rem;
     }
 
     .card {
@@ -70,13 +78,13 @@ import TestimonialCard from './TestimonialCard.vue';
         max-width: 480px;
     }
 
-    .card:nth-of-type(2),
-    h1 {
+    .card:nth-of-type(2) {
+        grid-row: span 4;
         justify-self: end;
     }
 
     .icon-quote {
-        left: 124px;
+        left: 110px;
     }
 }
 </style>

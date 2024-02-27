@@ -16,21 +16,30 @@ defineProps<{ restaurant: Restaurant }>();
 </template>
 
 <style scoped>
+.card {
+    gap: 12px;
+    padding: 26px 16px;
+    padding-bottom: 18px;
+}
+
 .image {
     width: 100%;
-    height: 300px;
+    height: 212px;
+    margin-bottom: 16px;
+
     object-fit: cover;
     border-radius: var(--card-radius);
 }
 
 .row {
     display: flex;
-    gap: 8px;
+    gap: 12px;
     align-items: baseline;
 }
 
 .name {
     margin-right: auto;
+    font-size: 1.5rem;
 }
 
 .icon-star {
@@ -45,11 +54,14 @@ defineProps<{ restaurant: Restaurant }>();
 }
 
 .description {
+    line-height: 1.5rem;
     color: var(--text-muted-color);
 }
 
 .link {
     margin-top: auto;
+
+    font-size: 0.8rem;
     font-weight: bold;
     color: var(--primary-color);
     text-align: end;

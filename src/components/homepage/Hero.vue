@@ -40,8 +40,8 @@
 <style scoped>
 #hero {
     position: relative;
-    overflow-x: hidden;
-    padding: 96px var(--sm-padding-x);
+    overflow: hidden;
+    padding: 86px var(--sm-padding-x);
     padding-bottom: 0;
 }
 
@@ -51,13 +51,19 @@
 
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 28px;
     align-items: start;
+}
+
+p {
+    line-height: 1.7rem;
 }
 
 .button-primary {
     display: flex;
+    gap: 4px;
     align-items: center;
+    font-weight: normal;
 }
 
 .icon-search {
@@ -66,8 +72,9 @@
 
 .hero-illustration {
     z-index: 2;
-    width: 100%;
-    margin: -96px 0;
+    width: 85%;
+    margin: -60px auto;
+    margin-bottom: -80px;
 }
 
 hr {
@@ -91,7 +98,6 @@ hr {
 
 .stripes-row {
     display: flex;
-
     width: 100%;
     height: 100%;
 }
@@ -131,20 +137,27 @@ hr {
         justify-content: space-between;
 
         margin-top: -112px;
-        padding: calc(128px + 112px) var(--lg-padding-x);
-        padding-bottom: 192px;
+        padding: 284px var(--lg-padding-x);
+        padding-bottom: 190px;
 
         background: linear-gradient(-7deg, #fff 30%, #f6f9ff 30%);
     }
 
     .hero-content {
-        max-width: 550px;
+        max-width: 620px;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 3.6rem;
     }
 
     .hero-illustration {
-        flex: 0.8;
-        max-width: 500px;
-        margin: -72px 0;
+        max-width: 490px;
+        margin: -48px 0;
     }
 
     hr {

@@ -29,7 +29,7 @@ FetchData();
 <template>
     <div id="restaurant-list">
         <div class="heading">
-            <h1>Find Your Perfect Dining Spot</h1>
+            <h2>Find Your Perfect Dining Spot</h2>
             <p>Search by Cuisine, Location, or Name</p>
         </div>
         <SearchBar />
@@ -50,7 +50,7 @@ FetchData();
 
 <style scoped>
 #restaurant-list {
-    padding: 48px 0;
+    padding: 64px 0;
 }
 
 .heading {
@@ -58,17 +58,18 @@ FetchData();
     text-align: center;
 }
 
-.heading h1 {
+.heading h2 {
     margin-bottom: 16px;
+    font-size: 2.2rem;
 }
 
 .restaurants {
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 32px;
 
-    padding: 48px var(--sm-padding-x);
+    padding: 24px calc(var(--sm-padding-x) + 24px);
 }
 
 .show-more {
@@ -109,6 +110,14 @@ FetchData();
 @media screen and (min-width: 992px) {
     .restaurants {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .heading h2 {
+        font-size: 2.9rem;
+    }
+
+    .heading p {
+        font-size: 1.2rem;
     }
 }
 

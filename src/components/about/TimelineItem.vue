@@ -30,7 +30,7 @@ defineProps({
         "line"
         "event";
     grid-template-rows: 1fr 1fr 24px 48px 1fr;
-    gap: 8px;
+    gap: 12px;
     align-items: center;
     justify-items: center;
 
@@ -76,7 +76,7 @@ defineProps({
     justify-content: end;
 
     width: 1px;
-    height: 48px;
+    height: 54px;
 
     background-color: var(--text-muted-color);
 }

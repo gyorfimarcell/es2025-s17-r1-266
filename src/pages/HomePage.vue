@@ -6,10 +6,16 @@ import TopRated from "../components/homepage/TopRated.vue";
 </script>
 
 <template>
-    <Hero />
-    <TopRated />
-    <Testimonials />
-    <RestaurantList />
+    <div id="home">
+        <Hero />
+        <TopRated />
+        <Testimonials />
+        <RestaurantList />
+    </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+#home {
+    --sm-padding-x: 38px;
+}
+</style>

@@ -43,8 +43,12 @@
 
 <style scoped>
 #privacy-policy {
-    padding: 48px 16px;
-    line-height: 1.5rem;
+    padding: 48px 20px;
+    line-height: 1.7rem;
+}
+
+p {
+    font-size: 1.2rem;
 }
 
 .heading {
@@ -52,18 +56,18 @@
 }
 
 .heading+p {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
 /* Showcase Website line */
 h1+p {
-    margin-top: 24px;
-    margin-bottom: 12px;
+    margin-top: 26px;
+    margin-bottom: 10px;
 }
 
 /* Data protection line */
 .heading:nth-child(3) {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
 @media screen and (min-width: 992px) {

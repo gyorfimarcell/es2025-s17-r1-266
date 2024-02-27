@@ -34,7 +34,7 @@ import SocialButtons from '../components/SocialButtons.vue';
                 <input type="email" placeholder="Email">
                 <input type="tel" placeholder="Phone Number">
             </div>
-            <textarea rows="6" placeholder="Message"></textarea>
+            <textarea rows="5" placeholder="Message"></textarea>
             <button class="button-primary">Send Message</button>
         </div>
     </div>
@@ -44,7 +44,7 @@ import SocialButtons from '../components/SocialButtons.vue';
 #contact {
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 50px;
 
     padding: 64px var(--sm-padding-x);
     padding-top: 32px;
@@ -52,33 +52,43 @@ import SocialButtons from '../components/SocialButtons.vue';
 
 /* #region Contact information block */
 .info {
-    flex-grow: 1;
+    position: relative;
+
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     gap: 16px;
 
     padding: 40px;
-    padding-bottom: 24px;
+    padding-bottom: 16px;
+
+    color: white;
 
     background-color: var(--primary-color);
     border-radius: var(--card-radius);
-    color: white;
+}
 
-    position: relative;
-    overflow: hidden;
+.info h2+p {
+    font-size: 1.25rem;
 }
 
 .details {
     display: grid;
     grid-template-columns: 24px 1fr;
-    gap: 64px 24px;
+    gap: 50px 24px;
 
-    margin-top: 64px;
-    margin-bottom: 160px;
+    margin-top: 96px;
+    margin-bottom: 150px;
 
     .icon {
         margin: 0;
         background-color: white;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
     }
 }
 
@@ -90,25 +100,23 @@ import SocialButtons from '../components/SocialButtons.vue';
 .circle1,
 .circle2 {
     position: absolute;
-    background-color: white;
     opacity: 20%;
+    background-color: white;
     border-radius: 50%;
 }
 
 .circle1 {
+    right: -64px;
+    bottom: -64px;
     width: 244px;
     height: 244px;
-
-    bottom: -64px;
-    right: -64px;
 }
 
 .circle2 {
+    right: 72px;
+    bottom: 64px;
     width: 140px;
     height: 140px;
-
-    bottom: 64px;
-    right: 64px;
 }
 
 /* #endregion */
@@ -117,10 +125,14 @@ import SocialButtons from '../components/SocialButtons.vue';
 
 /* #region Contact Us block */
 .form {
-    flex-grow: 10;
     display: flex;
     flex-direction: column;
+    flex-grow: 10;
     gap: 16px;
+}
+
+.form p {
+    font-size: 1.2rem;
 }
 
 .form-row {
@@ -129,15 +141,16 @@ import SocialButtons from '../components/SocialButtons.vue';
 }
 
 .form :is(input, textarea) {
-    width: 100%;
-
-    padding: 12px;
-
-    border: none;
-    background-color: #f5f5f5;
-    border-radius: var(--card-radius);
-
     resize: none;
+
+    width: 100%;
+    padding: 14px;
+
+    font-size: 1.05rem;
+
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: var(--card-radius);
 }
 
 .form .button-primary {
@@ -151,13 +164,23 @@ import SocialButtons from '../components/SocialButtons.vue';
     #contact {
         flex-direction: row;
         gap: 80px;
-
-        padding-left: var(--lg-padding-x);
         padding-right: var(--lg-padding-x);
+        padding-left: var(--lg-padding-x);
+    }
+
+    .info {
+        max-width: 490px;
+    }
+
+    .details {
+        margin-top: 74px;
+        margin-bottom: 142px;
     }
 
     .form {
+        gap: 14px;
         margin-top: 48px;
+        margin-right: 32px;
     }
 
     .form .button-primary {

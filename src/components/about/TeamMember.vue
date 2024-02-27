@@ -18,7 +18,7 @@ defineProps({
 .member {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     align-items: center;
 
     text-align: center;
@@ -33,6 +33,7 @@ img {
 }
 
 .role {
+    font-size: 0.9rem;
     color: var(--text-muted-color);
 }
 </style>

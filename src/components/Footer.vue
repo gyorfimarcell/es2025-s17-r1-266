@@ -5,7 +5,9 @@ import SocialButtons from './SocialButtons.vue';
 <template>
     <footer id="footer">
         <div class="footer-left">
-            <FooterButton to="/" icon="logomark.svg" alt="DineEase logo" />
+            <RouterLink to="/">
+                <img src="/icons/logomark.svg" alt="DineEase Logo">
+            </RouterLink>
             <RouterLink to="/privacy-policy">Privacy Policy</RouterLink>
             <p>
                 <a href="tel:+36301234567">+36 30 123 4567</a>
@@ -26,7 +28,7 @@ import SocialButtons from './SocialButtons.vue';
     display: flex;
     justify-content: space-between;
 
-    padding: 64px var(--sm-padding-x);
+    padding: 72px var(--sm-padding-x);
 
     color: #fff;
 
@@ -37,11 +39,16 @@ import SocialButtons from './SocialButtons.vue';
 .footer-right {
     display: flex;
     flex-direction: column;
+}
+
+.footer-left {
     gap: 16px;
+    padding-left: 8px;
 }
 
 .footer-right {
-    margin-right: var(--sm-padding-x);
+    gap: 20px;
+    margin-right: calc(var(--sm-padding-x) * 2);
 }
 
 .footer-right p {

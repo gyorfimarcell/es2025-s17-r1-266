@@ -7,7 +7,7 @@
     flex-grow: 1;
 
     width: 100%;
-    height: 500px;
+    height: 400px;
 
     background: linear-gradient(-45deg, #eee 40%, #fff 50%, #eee 60%);
     background-position-x: 100%;

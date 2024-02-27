@@ -36,7 +36,7 @@ FetchData();
 #toprated {
     position: relative;
     overflow: hidden;
-    padding: 48px 0;
+    padding: 32px 0;
 }
 
 .heading {
@@ -48,13 +48,17 @@ FetchData();
     margin-bottom: 16px;
 }
 
+.heading p {
+    font-size: 1.2rem;
+}
+
 .restaurants {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 40px;
 
-    padding: 48px var(--sm-padding-x);
+    padding: 32px var(--sm-padding-x);
 }
 
 /* # region Background decorations */
@@ -66,21 +70,22 @@ FetchData();
 
     display: none;
 
-    width: 460px;
-    height: 460px;
-
     background-color: var(--bg-secondary-color);
     border-radius: 50%;
 }
 
 .circle1 {
-    top: 120px;
-    right: -150px;
+    top: 70px;
+    right: -100px;
+    width: 360px;
+    height: 360px;
 }
 
 .circle2 {
     bottom: -80px;
-    left: -120px;
+    left: -90px;
+    width: 460px;
+    height: 460px;
 }
 
 /* #endregion */

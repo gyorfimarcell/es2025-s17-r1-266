@@ -48,7 +48,7 @@
 <style scoped>
 #search-bar {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 12px;
     align-items: center;
@@ -121,7 +121,7 @@ select:has(option[hidden]:checked) {
 }
 
 .search-button {
-    width: 400px;
+    width: 48px;
     height: 48px;
     background-color: var(--bg-secondary-color);
     border-radius: var(--card-radius);
@@ -133,6 +133,8 @@ select:has(option[hidden]:checked) {
 
 /* Styles for advanced search bar */
 #search-bar:has(#advanced:checked) {
+    flex-direction: column;
+
     .simple-field {
         display: none;
     }
@@ -141,11 +143,15 @@ select:has(option[hidden]:checked) {
     .simple-text {
         display: inherit;
     }
+
+    .search-button {
+        width: 400px;
+    }
 }
 
 @media screen and (min-width: 768px) {
     #search-bar {
-        flex-direction: row;
+        flex-direction: row !important;
     }
 
     .advanced-field {
