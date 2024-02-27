@@ -52,13 +52,10 @@ a {
 }
 
 button {
+    cursor: pointer;
     padding: 0;
     background: none;
     border: none;
-}
-
-button:hover {
-    cursor: pointer;
 }
 
 /* #endregion */
@@ -88,6 +85,12 @@ button:hover {
 
     background-color: var(--primary-color);
     border-radius: var(--radius);
+
+    transition: background-color 0.2s;
+}
+
+.button-primary:hover {
+    background-color: #6227c7;
 }
 
 /* #endregion */

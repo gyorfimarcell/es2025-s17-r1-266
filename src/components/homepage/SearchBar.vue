@@ -123,11 +123,23 @@ select:has(option[hidden]:checked) {
 .search-button {
     width: 48px;
     height: 48px;
+
     background-color: var(--bg-primary-color);
     border-radius: var(--radius);
 
+    transition: background-color 0.2s;
+
     .icon {
         background-color: var(--primary-color);
+        transition: background-color 0.2s;
+    }
+}
+
+.search-button:hover {
+    background-color: var(--primary-color);
+
+    .icon {
+        background-color: white;
     }
 }
 

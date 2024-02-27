@@ -97,6 +97,11 @@ import TimelineItem from "../components/about/TimelineItem.vue";
 .connect button {
     color: var(--primary-color);
     background-color: white;
+    transition: background-color 0.2s;
+}
+
+.connect button:hover {
+    background-color: #eeeeee;
 }
 
 /* #endregion */
