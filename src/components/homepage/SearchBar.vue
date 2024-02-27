@@ -1,13 +1,13 @@
 <template>
-    <div id="search-bar">
+    <form id="search-bar" role="search">
         <!-- Radio buttons for switching between search modes -->
-        <input type="radio" name="search" id="advanced" />
-        <input type="radio" name="search" id="simple" />
+        <input type="radio" name="search" id="advanced" aria-label="Swith to advanced search" />
+        <input type="radio" name="search" id="simple" aria-label="Switch to simple search" />
 
         <!-- Simple searchbar -->
         <div class="simple-field">
             <div class="icon icon-search"></div>
-            <input type="text" placeholder="Search for restaurants" />
+            <input type="text" name="simple" placeholder="Search for restaurants" />
 
             <label for="advanced">
                 <div class="icon icon-filter"></div>
@@ -16,7 +16,7 @@
 
         <!-- Advanced searchbar -->
         <div class="advanced-field">
-            <select>
+            <select name="cusine" aria-label="Cusine">
                 <option selected disabled hidden>Cusine</option>
                 <option>Romanian</option>
                 <option>Seafood</option>
@@ -27,13 +27,13 @@
         </div>
         <div class="icon-input advanced-field">
             <div class="icon icon-location"></div>
-            <input type="text" placeholder="Location" />
+            <input type="text" name="location" placeholder="Location" />
         </div>
         <div class="icon-input advanced-field">
-            <input type="text" placeholder="Name" />
+            <input type="text" name="name" placeholder="Name" />
         </div>
 
-        <button class="search-button" aria-label="Search">
+        <button type="submit" class="search-button" aria-label="Search">
             <div class="icon icon-search"></div>
         </button>
 
@@ -42,7 +42,7 @@
                 Simple search
             </label>
         </div>
-    </div>
+    </form>
 </template>
 
 <style scoped>

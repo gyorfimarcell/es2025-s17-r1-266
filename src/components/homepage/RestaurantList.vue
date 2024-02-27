@@ -29,11 +29,11 @@ FetchData();
 <template>
     <div id="restaurant-list">
         <div class="heading">
-            <h2>Find Your Perfect Dining Spot</h2>
+            <h1>Find Your Perfect Dining Spot</h1>
             <p>Search by Cuisine, Location, or Name</p>
         </div>
         <SearchBar />
-        <div class="restaurants" v-if="restaurants != undefined">
+        <div class="restaurants" v-if="restaurants != undefined" id="allRestaurants">
             <TransitionGroup name="collapse">
                 <RestaurantCard v-for="restaurant in visibleRestaurants" :restaurant="restaurant"
                     :key="'list-' + restaurant.id" />
@@ -42,7 +42,8 @@ FetchData();
         <div class="restaurants" v-else>
             <CardPlaceholder v-for="_ in 3" />
         </div>
-        <button class="show-more" @click="isOpen = !isOpen" :class="{ open: isOpen }">
+        <button class="show-more" @click="isOpen = !isOpen" :class="{ open: isOpen }" :aria-expanded="isOpen"
+            aria-controls="allRestaurants">
             {{ isOpen ? "Show less" : "Show more" }}
         </button>
     </div>
@@ -58,7 +59,7 @@ FetchData();
     text-align: center;
 }
 
-.heading h2 {
+.heading h1 {
     margin-bottom: 16px;
     font-size: 2.2rem;
 }
@@ -114,7 +115,7 @@ FetchData();
         padding-right: var(--sm-padding-x);
     }
 
-    .heading h2 {
+    .heading h1 {
         font-size: 2.9rem;
     }
 

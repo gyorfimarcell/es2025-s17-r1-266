@@ -23,20 +23,20 @@ import SocialButtons from '../components/SocialButtons.vue';
             </div>
             <SocialButtons />
         </div>
-        <div class="form">
+        <form>
             <h1>Contact Us</h1>
             <p>Have an inquiry? Fill out the form to contact our team.</p>
             <div class="form-row">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="First Name" name="fname">
+                <input type="text" placeholder="Last Name" name="lname">
             </div>
             <div class="form-row">
-                <input type="email" placeholder="Email">
-                <input type="tel" placeholder="Phone Number">
+                <input type="email" placeholder="Email" name="email">
+                <input type="tel" placeholder="Phone Number" name="phone">
             </div>
-            <textarea rows="5" placeholder="Message"></textarea>
-            <button class="button-primary">Send Message</button>
-        </div>
+            <textarea rows="5" placeholder="Message" name="message"></textarea>
+            <button type="submit" class="button-primary">Send Message</button>
+        </form>
     </div>
 </template>
 
@@ -124,14 +124,14 @@ import SocialButtons from '../components/SocialButtons.vue';
 /* #endregion */
 
 /* #region Contact Us block */
-.form {
+form {
     display: flex;
     flex-direction: column;
     flex-grow: 10;
     gap: 16px;
 }
 
-.form p {
+form p {
     font-size: 1.2rem;
 }
 
@@ -140,7 +140,7 @@ import SocialButtons from '../components/SocialButtons.vue';
     gap: 16px;
 }
 
-.form :is(input, textarea) {
+form :is(input, textarea) {
     resize: none;
 
     width: 100%;
@@ -153,7 +153,7 @@ import SocialButtons from '../components/SocialButtons.vue';
     border-radius: var(--card-radius);
 }
 
-.form .button-primary {
+form .button-primary {
     align-self: start;
     margin-top: 32px;
 }
@@ -177,13 +177,13 @@ import SocialButtons from '../components/SocialButtons.vue';
         margin-bottom: 142px;
     }
 
-    .form {
+    form {
         gap: 14px;
         margin-top: 48px;
         margin-right: 32px;
     }
 
-    .form .button-primary {
+    form .button-primary {
         align-self: end;
         margin-top: 16px;
     }

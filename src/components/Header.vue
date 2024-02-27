@@ -9,10 +9,11 @@ const isOpen = ref(false);
         <RouterLink to="/" class="logo">
             <img src="/images/logo.png" alt="DineEase logo">
         </RouterLink>
-        <button class="hamburger-menu" :class="{ open: isOpen }" @click="isOpen = !isOpen">
+        <button class="hamburger-menu" :class="{ open: isOpen }" @click="isOpen = !isOpen" :aria-expanded="isOpen"
+            aria-label="Toggle navigation" aria-controls="nav">
             <div class="icon icon-menu"></div>
         </button>
-        <nav class="nav" :class="{ open: isOpen }">
+        <nav id="nav" :class="{ open: isOpen }">
             <ul @click="isOpen = false">
                 <li>
                     <RouterLink to="/">Home</RouterLink>
@@ -46,18 +47,18 @@ const isOpen = ref(false);
     height: 32px;
 }
 
-.nav {
+#nav {
     overflow: hidden;
     flex-basis: 100%;
     max-height: 0;
     transition: max-height 0.2s;
 }
 
-.nav.open {
+#nav.open {
     max-height: 200px;
 }
 
-.nav ul {
+#nav ul {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -69,7 +70,7 @@ const isOpen = ref(false);
     list-style: none;
 }
 
-.nav a {
+#nav a {
     font-size: 1.3rem;
     font-weight: bold;
 }
@@ -93,19 +94,19 @@ const isOpen = ref(false);
 }
 
 @media screen and (min-width: 768px) {
-    .nav {
+    #nav {
         flex-basis: unset;
         max-height: unset;
         margin-left: 42px;
     }
 
-    .nav ul {
+    #nav ul {
         flex-direction: row;
         gap: 24px;
         margin: 0;
     }
 
-    .nav a {
+    #nav a {
         font-size: 0.9rem;
         font-weight: bold;
     }

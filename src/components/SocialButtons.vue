@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const icons = [
     { to: "https://facebook.com", icon: "facebook.svg", alt: "Facebook" },
-    { to: "https://instagram.com", icon: "instagram.svg", alt: "Facebook" },
-    { to: "https://twitter.com", icon: "twitter.svg", alt: "Facebook" },
+    { to: "https://instagram.com", icon: "instagram.svg", alt: "Instagram" },
+    { to: "https://twitter.com", icon: "twitter.svg", alt: "Twitter" },
 ];
 </script>
 
