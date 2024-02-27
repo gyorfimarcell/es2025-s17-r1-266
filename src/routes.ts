@@ -5,10 +5,31 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.vue";
 
 
 const routes = [
-    { path: "/", component: HomePage },
-    { path: "/about", component: AboutPage },
-    { path: "/contact", component: ContactPage },
-    { path: "/privacy-policy", component: PrivacyPolicyPage },
+    {
+        path: "/",
+        component: HomePage,
+    },
+    {
+        path: "/about",
+        component: AboutPage,
+        meta: {
+            title: "About Us - DineEase"
+        }
+    },
+    {
+        path: "/contact",
+        component: ContactPage,
+        meta: {
+            title: "Contact Us - DineEase"
+        }
+    },
+    {
+        path: "/privacy-policy",
+        component: PrivacyPolicyPage,
+        meta: {
+            title: "Privacy Policy - DineEase"
+        }
+    },
 ];
 
 export default routes;
